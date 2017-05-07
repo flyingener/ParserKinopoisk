@@ -131,7 +131,7 @@ class SiteController extends Controller
         return $this->render('say', ['message' => $message]);
     }
 
-    public function actionYandex()
+    public function actionParserResult()
     {
         $client = new Client();
 
@@ -169,6 +169,6 @@ class SiteController extends Controller
         //получаем данные из файла
         $fileContent = file_get_contents('result.html', FILE_USE_INCLUDE_PATH);
 
-        return $this->render('yandex', ['body' => $fileContent]);
+        return $this->render('parserResult', ['body' => $fileContent]);
     }
 }
